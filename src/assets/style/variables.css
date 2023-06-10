@@ -1,0 +1,190 @@
+.primary-btn {
+  min-width: 250px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  padding: 10px 35px;
+  display: inline-block;
+  background-color: #fbbb00;
+  border-radius: 8px;
+  font-family: 'Conv_FontsFree-Net-SFProDisplay-Semibold';
+  font-weight: 600;
+  text-align: center;
+}
+
+.common-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #164444;
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.common-header h2 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Conv_FontsFree-Net-SFProDisplay-Semibold';
+  font-weight: 600;
+  text-align: center;
+}
+
+.common-header h2 span {
+  display: block;
+}
+
+.common-header a svg {
+  fill: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 36px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #efefef;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 1px solid #dadada;
+  overflow: hidden;
+}
+
+.slider:before {
+  position: absolute;
+  content: "No";
+  color: #a5a5a5;
+  height: 30px;
+  width: 40px;
+  right: 2px;
+  top: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fbbb00;
+  font-size: 12px;
+  font-weight: 18px;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translate(-40px, -50%);
+          transform: translate(-40px, -50%);
+  content: "Yes";
+}
+
+/*-----------------------------------custom radio --------------------------*/
+.radio-custom {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-custom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #848484;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-custom:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-custom input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-custom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-custom .checkmark:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #212121;
+}
+
+/*-----------------------------------custom radio --------------------------*/
+/*# sourceMappingURL=variables.css.map */

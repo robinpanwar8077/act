@@ -1,0 +1,282 @@
+$heading-color:#333;
+$text-color:#555;
+$yellow:#fbbb00;
+$green:#164444;
+$white:#ffffff;
+$black:#000000;
+$disable:#cdcdcd;
+
+
+@mixin flex-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin bold {
+  font-family: 'Conv_FontsFree-Net-SFProDisplay-Semibold';
+  font-weight: 600;
+}
+     
+@mixin medium-weight {
+  font-family: 'Conv_FontsFree-Net-SFProDisplay-Medium';
+  font-weight: 500;
+}
+
+@mixin heading-font {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin big-heading-font {
+  font-size: 25px;
+  line-height: 38px;
+
+  @media only screen and (min-width:768px){
+    font-size: 32px;
+  }
+}
+
+@mixin text-font {
+  font-size: 14px;
+  line-height: 22px;
+  @media only screen and (min-width:768px){
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @media only screen and (min-width:1023px){
+    font-size: 18px;
+  }
+}
+
+
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center($position) {
+  position: absolute;
+
+  @if $position=='vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @else if $position=='horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+
+  @else if $position=='both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//common css
+.disable{
+  background-color: $disable!important;
+  pointer-events: none!important;
+  cursor: default!important;
+}
+
+.primary-btn {
+  min-width: 250px;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include heading-font;
+  color: #fff;
+  padding: 10px 35px;
+  display: inline-block;
+  background-color: #fbbb00;
+  border-radius: 8px;
+  @include bold;
+  text-align: center;
+
+  &:focus,&:hover{
+    color: $white;
+  }
+}
+
+.common-header {
+  background-color: $green;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+ 
+    h2 {
+      color: #fff;
+      @include heading-font;
+      @include bold;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+
+    a {
+      svg {
+        fill: #fff;
+      }
+    }
+  
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 36px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #efefef;
+  -webkit-transition: .1s;
+  transition: .1s;
+  border: 1px solid #dadada;
+  overflow: hidden;
+}
+
+.slider:before {
+  position: absolute;
+  content: "No";
+  color: #a5a5a5;
+  height: 30px;
+  width: 39px;
+  right: 2px;
+  top:50%;
+  background-color: white;
+  transition: .4s;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $yellow;
+  font-size: 12px;
+  font-weight: 18px;
+
+}
+
+input:checked + .slider {
+  //h3 background-color: #2196F3;
+}
+
+input:focus + .slider {
+  // box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translate(-35px,-50%);
+  content: "Yes";
+}
+
+
+
+
+/*-----------------------------------custom radio --------------------------*/
+.radio-custom {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-custom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  border:1px solid #848484;
+}
+
+.radio-custom:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.radio-custom input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-custom input:checked ~ .checkmark:after {
+  display: block;
+} 
+
+/* Style the indicator (dot/circle) */
+.radio-custom .checkmark:after {
+  position: absolute;
+ 	top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background:#212121;
+}
+
+/*-----------------------------------custom radio --------------------------*/
+.padding-top{
+  padding-top: 45px
+}

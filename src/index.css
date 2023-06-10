@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.payment-logo {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+  .h1p {font-weight: 700;line-height: 1.4;margin: 0 0 2rem;font-family: "Work Sans" , sans-serif;font-size: 1.5rem;color: #333 !important;}
+
+
+  .card-hrd {
+    background-color: #164444;
+    display: flex;
+    padding: 2rem 0rem 0.7rem 1rem;
+}
+
+.card-hrd .checkout {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+a {
+  color: #164444;
+  transition: color .25s ease-out;
+}
+
+.card-txt h4 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 4rem;
+}
+
+.formBlock .formControl.static .formField {
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: solid 0.1rem #164444;
+  width: 100%;
+}
+
+
+
+.card-txt h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  line-height: 1.4rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+}
+
+.card.card-topMrg {
+  margin-bottom: 1rem;
+ 
+}
+
+
+
+.card {
+  padding: 0.8rem;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border:1px solid rgb(0 0 0) !important;
+  border-radius: 0.75rem !important;
+}
+
+.card-txt h5 {
+  
+  color: #333;
+  font-family: "Work Sans", sans-serif;
+  margin: 0 0 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+a.btn.btn-new.btn-full {
+  background-color: #FFC107;
+  padding: 0.6rem 0rem;
+  font-weight: 900;
+  color: white;
+  margin-top :22px;
+  margin-bottom: 22px;
+}
+
+.btn.btn-full {
+  width: 100%;
+}
+
+.btnBlock {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.justify-content-end {
+  -ms-flex-pack: end!important;
+  justify-content: flex-end!important;
+}
+
+.col-md-6.card-txt {margin-top: 5rem;}
+
+.card-txt .price-dtls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-txt .price-dtls .shhiping-para {
+  margin-left: 4rem;
+  font-weight: 900;
+  margin-bottom: 0rem;
+}
+
+.card-txt .shipping-dtls .shhiping-para {
+  margin-left: 4rem;
+  font-weight: 900;
+  margin-bottom: 0rem;
+}
+
+.card-txt .shipping-dtls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.span{
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.formBlock .formControl.static label {
+  position: static;
+  margin-bottom: 1rem;
+  color: #164444;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.formBlock .formControl.static .formField {
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: solid 0.1rem #164444;
+
+  
+}
+
+.formControl.static {
+  margin-bottom: 30px;
+}
+
+.row.px-5 {
+  margin-top: 50px;
+}
+
+
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+      }
+
+
+
+      .price-dtls.total-dtls {
+        font-weight: 900;
+    }
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fbbb00; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fbbb00; 
+}
